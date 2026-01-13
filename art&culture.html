@@ -1,0 +1,382 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, 
+initial-scale=1.0">
+<title>Indian Art & Culture Magazine</title>
+
+<style>
+body{
+    margin:0;
+    overflow-x:hidden;
+    font-family:Georgia, serif;
+    background:#f4f1ec;
+}
+
+/* Simple reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; background:#faf7f3; color:#111; }
+
+/* TOP BAR */
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* left / right containers keep icons aligned to edges */
+.topbar-left { display:flex; align-items:center; }
+.topbar-right { display:flex; justify-content:flex-end; gap:10px; align-items:center; }
+
+/* center logo */
+.topbar-center { text-align:center; }
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+/* Icon button style */
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111;
+}
+.icon-btn:focus { outline:2px solid rgba(108,92,231,0.2); border-radius:4px; }
+
+/* hamburger (simple three lines) */
+.hamburger {
+  display:inline-block;
+  width:18px;
+  height:2px;
+  background:#111;
+  position:relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#111;
+}
+.hamburger::before { top:-6px; }
+.hamburger::after  { top:6px; }
+
+/* category nav (thin nav below topbar) */
+.catnav {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.catnav ul {
+  max-width:1100px;
+  margin: 0 auto;
+  display:flex;
+  gap: 26px;
+  list-style:none;
+  padding: 12px 18px;
+  justify-content:center;
+  align-items:center;
+}
+.catnav a {
+  text-decoration:none;
+  color:#666;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:0.9;
+}
+.catnav a:hover { color:#111; opacity:1; }
+
+/* small screens: collapse layout slightly */
+@media (max-width:720px) {
+  .topbar {
+    grid-template-columns: auto 1fr auto;
+    padding:10px 12px;
+  }
+
+  .logo { font-size:20px; text-align:center; }
+
+  .catnav ul { gap: 14px; padding:10px; font-size:12px; overflow-x:auto; white-space:nowrap; }
+}
+
+/* Accessibility: hide buttons when JS could open panels (not used here) */
+
+.section{
+    padding:50px;
+    width:100%;
+    border-radius:10px;
+}
+
+
+.image-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.image-grid div{
+    text-align:center;
+    font-size:18px;
+}
+
+.image-grid img{
+    width:100%;
+    height: 250px;
+    grid-template-columns:repeat(3fr, 1fr);
+    object-fit:cover;
+    border-radius:10px;
+}
+.info-section {
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: #faf7f3;
+    text-align: center;
+    font-size: 18px;
+}
+
+.info-section a {
+    color: #8b0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn" aria-label="menu" title="Menu">
+        <!-- hamburger -->
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <div class="topbar-center">
+
+      <div class="logo">MASIKA</div>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="issue" title="Issue">Issue 37</button>
+      <button class="icon-btn" aria-label="bookmark" title="Read List">📖</button>
+      <button class="icon-btn" aria-label="search" title="Search">🔍</button>
+    </div>
+  </header>
+
+  
+  <nav class="catnav" aria-label="Main categories">
+    <ul>
+      <li><a href="homepage.html">HOME</a></li>
+      <li><a href="sports.html">SPORTS</a></li>
+      <li><a href="health.html">HEALTH</a></li>
+      <li><a href="art&culture.html">ART & CULTURE</a></li>
+      <li><a href="books.html">BOOKS</a></li>
+    </ul>
+  </nav>
+<div class="container">
+
+<div class="section">
+<h2>Indian Art & Culture Gallery</h2>
+<p>
+A glimpse of India’s rich art forms, heritage monuments, festivals,
+and classical traditions.
+</p>
+
+<div class="image-grid">
+
+<div><a href="https://en.wikipedia.org/wiki/Madhubani_art">
+<img src="madhu.jpeg">
+<p><b>Madhubani Art</b><br>Bihar folk painting</p></a>
+</div>
+
+<div><a href="https://en.wikipedia.org/wiki/Bharatanatyam">
+<img src="bharat.jpeg">
+<p><b>Bharatanatyam</b><br>Classical dance form</p></a>
+</div>
+<div><a href="https://en.wikipedia.org/wiki/Taj_Mahal">
+<img src="taj.jpeg">
+<p><b>Taj Mahal</b><br>World heritage site</p></a>
+</div>
+
+<div><a href="https://en.wikipedia.org/wiki/Ajanta_Caves">
+<img src="ajanta.jpeg">
+<p><b>Ajanta Caves</b><br>Ancient rock caves</p></a>
+</div>
+
+<div><a href="https://en.wikipedia.org/wiki/Handicraft">
+<img src="art.jpeg">
+<p><b>Handicrafts</b><br>Traditional crafts</p></a>
+</div>
+
+<div><a href="https://en.wikipedia.org/wiki/Folk_music">
+<img src="folk.jpeg">
+<p><b>Folk Music</b><br>Regional culture</p></a>
+</div>
+
+</div>
+</div>
+<div class="info-section">
+    <p align="center">
+        For more detailed information about Indian art, heritage, and culture,
+        visit the following links:
+    </p>
+    <a href="https://indianculture.gov.in" target="_blank">
+        Indian Culture Portal
+    </a> |
+    <a href="https://www.culturalindia.net" target="_blank">
+        Cultural India
+    </a>
+</div>
+<footer>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  background:#c8a063;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #4d2f03;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background:#4d2f03;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background:#4d2f03;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.brand {
+  font-size: 80px;
+  font-weight: 900;
+  color:  #f8c06c;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 50px;
+  }
+}
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!-- Newsletter Section -->
+    <h2></h2>
+    </div>
+
+
+  <!-- Main Footer -->
+  <footer class="footer">
+    <div class="brand">MASIK</div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Categories</h4>
+        <a href="homepage.html">HOMEPAGE</a>
+        <a href="sports.html">SPORTS</a>
+        <a href="health.html">HEALTH</a>
+        <a href="art&culture.html">ART + CULTURE</a>
+        <a href="books.html">BOOKS</a>
+      </div>
+
+      <div>
+        <h4> Our Team</h4>
+        <a href="#">Ragini Sunil Deshmukh</a>
+        <a href="#">Gargi Ranjeet Deshmukh</a>
+        <a href="#">Rutika Arun Ghatol</a>
+        <a href="#">Pragati Pramod Bhople</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="#">YouTube : Masik</a>
+        <a href="#">✉️ : masikweekly7@gmail.com</a>
+        <a href="#">📞 : 9856345678</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+
+    </div>
+</body>
+</html>

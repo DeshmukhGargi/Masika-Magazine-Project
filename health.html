@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Blog Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #faf7f3;color:#111;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            color:black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background:transparent ;
+            padding: 12px;
+            text-align: center;
+        }
+        nav a {
+            color:#666;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 13px;
+      opacity:0.9;
+        }
+        nav a:hover {
+            text-decoration: underline;
+      color:#111; opacity:1;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        /* Articles Section */
+        .articles {
+            width: 70%;
+    
+        }
+        .card {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 30%;
+        }
+        .sidebar-box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .sidebar-box h3 {
+            margin-top: 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px 6px 0 0;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer{
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> Masik </h1>
+</header>
+
+<nav>
+    <a href="homepage.html">Home</a>
+    <a href="sports.html">Sports </a>
+    <a href="health.html">Health</a>
+    <a href="art&culture.html">Art & Culture  </a>
+    <a href="books.html">Books </a>
+</nav>
+
+<div class="container">
+    <div class="articles">
+
+        <div class="card">
+            <img src="first.jpeg" alt="Article Image">
+            <div class="content">
+                <h2>10 Daily Habits to Improve Your health </h2>
+                <p>Creating positive habits can transform your entire lifestyle. Learn easy and effective habits that will make your life healthier and happier.</p>
+              <a href="topic1.html">know more </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="second.jpeg" alt="Article Image">
+            <div class="content">
+                <h2> Green living and Environmental Health </h2>
+                <p> Discover what green living means and explore its impact on our surrounding environment. Know more about Environmental Health and its importance.</p><a href="topic2.html">Know more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thied.jpeg" alt="Article Image">
+            <div class="content">
+                <h2>The 11 Themes of health and wellness </h2>
+                <p>The 11 themes of health and wellness, prominent in India's school programs (like Ayushman Bharat), cover a broad spectrum of holistic well-being .</p><a href="topic3.html">know more </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-box">
+            <h3>Trending Topics</h3>
+            <span class="tag">Climate change & Health</span>
+            <span class="tag">Pandemic Preparedness </span>
+            <span class="tag">Antimicrobial Resistance (AMR)</span>
+            <span class="tag">Health equity and UHC</span>
+            <span class="tag">Health System in low resource settings </span>
+          <span class="tag">Mental health</span>
+        </div>
+
+        <div class="sidebar-box">
+            <h3> Quote of the day</h3>
+            <p><b>"It is health that is real wealth and not pieces of gold and silver."</b> — Mahatma Gandhi</p>
+        </div>
+
+        <div class="sidebar-box">
+            <h3> Health Websites </h3>
+            <p><b>"Health for all"</b></p>
+            <a href="https://www.who.int" target="_blank"> World 🌎 Health Organization</a><br><br>
+                         <p><b>"better Information, better health"</b></p>
+            <a href="https://www.webmd.com" target="_blank"> WebMD</a><br><br>
+                                      <p><b>"Know you can"</b></p>
+            <a href="https://axa.com" target="_blank"> AXA (Health insurance)</a><br><br>
+            
+        </div>
+        
+    </div>
+</div>
+<footer>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #c8a063;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #4d2f03;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background:#4d2f03;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #4d2f03;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.brand {
+  font-size: 80px;
+  font-weight: 900;
+  color:  #f8c06c;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 50px;
+  }
+}
+</style>
+
+
+  <!-- Main Footer -->
+  <footer class="footer">
+    <div class="brand">MASIK</div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Categories</h4>
+        <a href="#">About us</a>
+        <a href="#">Sports</a>
+        <a href="#">Health</a>
+        <a href="#">Art + Culture</a>
+        <a href="#">Books</a>
+      </div>
+
+      <div>
+        <h4> Our Team</h4>
+        <a href="#">Ragini Sunil Deshmukh</a>
+        <a href="#">Gargi Ranjeet Deshmukh</a>
+        <a href="#">Rutika Arun Ghatol</a>
+        <a href="#">Pragati Pramod Bhople</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="#">YouTube : Masik</a>
+        <a href="#">✉️ : masikweekly7@gmail.com</a>
+        <a href="#">📞 : 9856345678</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+
+    </div>
+  </footer>
+
+</body>
+</html>

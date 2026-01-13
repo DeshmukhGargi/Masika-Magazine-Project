@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> MASIKA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+body {
+  background: #faf7f3;
+}
+
+/* Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.issue, .barcode {
+  font-size: 12px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.category {
+  margin-top: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+.hero h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}
+/*grid*/
+.grid {
+    display:grid;
+    grid-template-columns:auto;
+    gap:15px;
+}
+
+.grid div {
+background-color: #1c2a39;
+color: white;
+  padding: 20px;
+  width: 100%;
+
+}
+
+/* Featured Section */
+.featured h3 {
+  margin: 30px 0 15px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #1c2a39;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+}
+</style>
+
+
+<style>
+    /* Simple reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; background:#faf7f3; color:#111; }
+
+/* TOP BAR */
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* left / right containers keep icons aligned to edges */
+.topbar-left { display:flex; align-items:center; }
+.topbar-right { display:flex; justify-content:flex-end; gap:10px; align-items:center; }
+
+/* center logo */
+.topbar-center { text-align:center; }
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+/* Icon button style */
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111;
+}
+.icon-btn:focus { outline:2px solid rgba(108,92,231,0.2); border-radius:4px; }
+
+/* hamburger (simple three lines) */
+.hamburger {
+  display:inline-block;
+  width:18px;
+  height:2px;
+  background:#111;
+  position:relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#111;
+}
+.hamburger::before { top:-6px; }
+.hamburger::after  { top:6px; }
+
+/* category nav (thin nav below topbar) */
+.catnav {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.catnav ul {
+  max-width:1100px;
+  margin: 0 auto;
+  display:flex;
+  gap: 26px;
+  list-style:none;
+  padding: 12px 18px;
+  justify-content:center;
+  align-items:center;
+}
+.catnav a {
+  text-decoration:none;
+  color:#666;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:0.9;
+}
+.catnav a:hover { color:#111; opacity:1; }
+
+/* small screens: collapse layout slightly */
+@media (max-width:720px) {
+  .topbar {
+    grid-template-columns: auto 1fr auto;
+    padding:10px 12px;
+  }
+
+  .logo { font-size:20px; text-align:center; }
+
+  .catnav ul { gap: 14px; padding:10px; font-size:12px; overflow-x:auto; white-space:nowrap; }
+}
+</Style>
+<body>
+<!-- top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn" aria-label="menu" title="Menu">
+        <!-- hamburger -->
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <div class="topbar-center">
+      <!-- replace with your SVG or image logo -->
+      <div class="logo">MASSIKA</div>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="issue" title="Issue">Issue 37</button>
+      <button class="icon-btn" aria-label="bookmark" title="Read List">📖</button>
+      <button class="icon-btn" aria-label="search" title="Search">🔍</button>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="catnav" aria-label="Main categories">
+    <ul>
+      <li><a href="homepage.html">HOME</a></li>
+      <li><a href="sports.html">SPORTS</a></li>
+      <li><a href="health.html">HEALTH</a></li>
+      <li><a href="art&culture.html">ART+ CULTURE</a></li>
+      <li><a href="books.html">BOOKS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="MESSI.jpeg"
+           alt="Couple Image">
+      <p class="category">CURRENT HIGHLIGHTS</p>
+      <h2> 'NAMASTE INDIA!': LIONEL MESSI'S GOAT TOUR OF INDIA</h2>
+      <p class="date">THE NEW YORK TIMES· DECEMBER 18, 2020</p>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+      <h3>FASHION & LIFESTYLE</h3>
+
+      <div class="grid">
+        <div class="class">
+          <h4>The Secrets Of Style For Women On A Budget</h4>
+          <p>Dalia Holmes · October 29, 2020</p>
+        </div>
+
+        <div class="card">
+          <h4>The Secrets Of Style For Men On A Budget</h4>
+          <p>James Miller · October 29, 2020</p>
+        </div>
+
+         <div class="card">
+          <h4> Indian wear (sarees,lehengas)getting modern cuts,drapesand fabrics.</h4>
+          <p>James Miller · October 29, 2020</p>
+        </div>
+
+         <div class="card">
+          <h4>Y2K (low-rise,neon,cargo pants) and 90's style are back,mixed with modern twists</h4>
+          <p>James Miller · October 29, 2020</p>
+        </div>
+    
+      </div>
+    </section>
+
+  </main>
+  <footer>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  background:#c8a063;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #4d2f03;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background:#4d2f03;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background:#4d2f03;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.brand {
+  font-size: 80px;
+  font-weight: 900;
+  color: #f8c06c;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 50px;
+  }
+}
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2></h2>
+  
+    </div>
+
+
+  <!-- Main Footer -->
+  <footer class="footer">
+    <div class="brand">MASIK</div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Categories</h4>
+        <a href="#">About us</a>
+        <a href="#">Sports</a>
+        <a href="#">Health</a>
+        <a href="#">Art + Culture</a>
+        <a href="#">Books</a>
+      </div>
+
+      <div>
+        <h4> Our Team</h4>
+        <a href="#">Ragini Sunil Deshmukh</a>
+        <a href="#">Gargi Ranjeet Deshmukh</a>
+        <a href="#">Rutika Arun Ghatol</a>
+        <a href="#">Pragati Pramod Bhople</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="#">YouTube : Masik</a>
+        <a href="#">✉️ : masikweekly7@gmail.com</a>
+        <a href="#">📞 : 9856345678</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+
+    </div>
+  </footer>
+
+</body>
+</html>

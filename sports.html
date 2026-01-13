@@ -1,0 +1,361 @@
+<html>
+<head>
+  <title>MASIKA</title>
+  <style>
+    /* Simple reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; background:#faf7f3; color:#111;text-align:"center"; }
+
+/* TOP BAR */
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* left / right containers keep icons aligned to edges */
+.topbar-left { display:flex; align-items:center; }
+.topbar-right { display:flex; justify-content:flex-end; gap:10px; align-items:center; }
+
+/* center logo */
+.topbar-center { text-align:center; }
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+/* Icon button style */
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111;
+}
+.icon-btn:focus { outline:2px solid rgba(108,92,231,0.2); border-radius:4px; }
+
+/* hamburger (simple three lines) */
+.hamburger {
+  display:inline-block;
+  width:18px;
+  height:2px;
+  background:#111;
+  position:relative;
+}
+.hamburger::before,
+.hamburger::after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#111;
+}
+.hamburger::before { top:-6px; }
+.hamburger::after  { top:6px; }
+
+/*flex box*/
+.gallery{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* category nav (thin nav below topbar) */
+.catnav {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.catnav ul {
+  max-width:1100px;
+  margin: 0 auto;
+  display:flex;
+  gap: 26px;
+  list-style:none;
+  padding: 12px 18px;
+  justify-content:center;
+  align-items:center;
+}
+.catnav a {
+  text-decoration:none;
+  color:#666;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:0.9;
+}
+.catnav a:hover { color: #966f33; opacity:1; }
+
+/* small screens: collapse layout slightly */
+@media (max-width:720px) {
+  .topbar {
+    grid-template-columns: auto 1fr auto;
+    padding:10px 12px;
+  }
+
+  .logo { font-size:20px; text-align:center; }
+
+  .catnav ul { gap: 14px; padding:10px; font-size:12px; overflow-x:auto; white-space:nowrap; }
+}
+.container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .sports-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sport-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .sport-card h3 {
+            color: #966f33;
+            margin-bottom: 10px;
+        }
+
+        .sport-card p {
+            font-size: 14px;
+        }
+        .card{
+         background: #fff;
+         border-radius: 8px;
+         overflow: hidden;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.1) ;
+        }
+        .card image{
+          width: 100%;
+          border-radius: 5px;
+        }
+        h2{
+          font-weight: bold;
+          margin-top: 8px;
+          font-size: 15px;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="icon-btn" aria-label="menu" title="Menu">
+        <!-- hamburger -->
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <div class="topbar-center">
+      <!-- replace with your SVG or image logo -->
+      <div class="logo">MASIKA</div>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="issue" title="Issue">Issue 37</button>
+      <button class="icon-btn" aria-label="bookmark" title="Read List">📖</button>
+      <button class="icon-btn" aria-label="search" title="Search">🔍</button>
+    </div>
+  </header>
+
+  <!-- category nav -->
+  <nav class="catnav" aria-label="Main categories">
+    <ul>
+      <li><a href="homepage.html">HOME</a></li>
+      <li><a href="sports.html">SPORTS</a></li>
+      <li><a href="health.html">HEALTH</a></li>
+      <li><a href="art&culture.html">ART & CULTURE</a></li>
+      <li><a href="books.html">BOOkS</a></li>
+    </ul>
+  </nav>
+
+  <!-- demo page content -->
+  <main class="page">
+    <section style="padding:40px; text-align:center;">
+      <h1>Sports</h1  >
+      <br>
+    <div class="gallery">
+        <div class="card">
+           <a href="https://en.wikipedia.org/wiki/Women%27s_Cricket_World_Cup"><img src="cricket.jpeg" width="250" height="220" alt="Cricket">
+            <h2>Cricket World Cup Updates</h2><br>
+            <p>The Cricket World Cup brings exciting matches, thrilling performances, and unforgettable moments for fans worldwide.</p></a>
+        </div>
+        <br>
+        <div class="card">
+            <a href="https://en.wikipedia.org/wiki/Association_football"><img src="football.jpeg"  width="250" height="220"alt="Football">
+            <h2>Football League Highlights</h2><br>
+            <p>Top football leagues showcase skill, teamwork, and passion as teams compete for championship glory.</p></a>
+        </div>
+        <br>
+        <div class="card">
+            <a href="https://en.wikipedia.org/wiki/Hockey"><img src="hockey.jpeg" width="250" height="220" alt="Hockey">
+            <h2>Hockey Championship</h2><br>
+            <p>Hockey continues to grow with fast-paced action and intense competition across international tournaments.</p></a>
+        </div>                                                      
+    </div>
+
+    <div class="sidebar" align="left">
+      <br>
+        <h3>Trending Sports</h3>
+        
+            <li> <a href="https://en.wikipedia.org/wiki/2025_Indian_Premier_League">IPL 2025  </a> </li>
+            <li> <a href="https://en.wikipedia.org/wiki/FIFA_World_Cup">FIFA World Cup</a></li>
+            <li>  <a href="https://en.wikipedia.org/wiki/Olympic_Games">Olympics</a>   </li>
+            <li> <a href="https://en.wikipedia.org/wiki/Olympic_Games">Pro Kabaddi </a></li>
+            
+    </div>
+</div>
+    </section>
+  </main>
+<footer>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+  background:#c8a063;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #4d2f03;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background:#4d2f03;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background:#4d2f03;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.brand {
+  font-size: 80px;
+  font-weight: 900;
+  color: #f8c06c;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 50px;
+  }
+}
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2></h2>
+  
+    </div>
+
+
+  <!-- Main Footer -->
+   <di>
+    <h3></h3>
+   </di>
+  <footer class="footer">
+    <div class="brand">MASIK</div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Categories</h4>
+        <a href="#">About us</a>
+        <a href="#">Sports</a>
+        <a href="#">Health</a>
+        <a href="#">Art + Culture</a>
+        <a href="#">Books</a>
+      </div>
+
+      <div>
+        <h4> Our Team</h4>
+        <a href="#">Ragini Sunil Deshmukh</a>
+        <a href="#">Gargi Ranjeet Deshmukh</a>
+        <a href="#">Rutika Arun Ghatol</a>
+        <a href="#">Pragati Pramod Bhople</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="#">YouTube : Masik</a>
+        <a href="#">✉️ : masikweekly7@gmail.com</a>
+        <a href="#">📞 : 9856345678</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+
+    </div>
+  </footer>
+</body>
+</html>
